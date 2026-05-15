@@ -1,0 +1,21 @@
+Seçimli Hikaye Sistemi — Hızlı Başlangıç
+=========================================
+
+Unity menüsü:
+  Story → Generate Sample Content   — Örnek bölüm + node asset'leri + ChoiceButton prefab
+  Story → Setup Scene For Story Game — Sahneyi otomatik kurar (Canvas, UI, StoryManager)
+  Story → (Chapter Inspector) Validate Chapter — Bağlantıları kontrol eder
+
+Yeni bölüm oluşturma:
+  1. Project: Create → Story → Chapter
+  2. Chapter Inspector: Create Node (node'lar Assets/Story/Nodes altına eklenir)
+  3. Node seç → metin yaz → Choices listesinden Add
+  4. Her choice için Next Node dropdown'dan hedef seç (None = hikaye biter)
+  5. Chapter'da Set as Start ile başlangıç node'unu işaretle
+  6. StoryManager.chapter alanına bölümü sürükle
+
+Oyun sahnesi:
+  - UIController: choiceButtonPrefab + choiceButtonContainer
+  - StoryManager: chapter (StoryChapter asset)
+
+Bitiş node'u: choices listesi boş bırakılır.
